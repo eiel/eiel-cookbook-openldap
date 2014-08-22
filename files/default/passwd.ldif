@@ -1,0 +1,20 @@
+dn: dc=my-domain,dc=com
+objectClass: dcObject
+objectClass: organization
+dc: my-domain
+o: my-domain
+
+dn: ou=People,dc=my-domain,dc=com
+objectClass: organizationalUnit
+ou: People
+
+dn: uid=ldapuser,ou=People,dc=my-domain,dc=com
+objectClass: account
+objectClass: posixAccount
+uid: ldapuser
+cn: ldapuser
+userPassword: ldapuser
+loginShell: /bin/bash
+uidNumber: 1000
+gidNumber: 1000
+homeDirectory: /home/ldapuser
