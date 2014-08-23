@@ -62,6 +62,7 @@ bash "Setting LDAPS" do
   code <<-EOC
     sed -ie "s/^[^#]*SLAPD_LDAPS=no/SLAPD_LDAPS=yes/" /etc/sysconfig/ldap
   EOC
+  notifies :restart, "service[slapd]"
 end
 
 execute "create ldap db" do
